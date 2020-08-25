@@ -1,2 +1,44 @@
 .main-section {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+
+  .main-section-image {
+    margin-top: 10px;
+    width: 150%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .main-section-info {
+    margin-top: 30px;
+    text-align: center;
+    .section-info-title {
+      font-weight: 800;
+      color: $Very-Dark-Blue;
+      font-size: 2.4em;
+      line-height: 50px;
+      margin-bottom: 10px;
+    }
+    .section-info-text {
+      color: $Grayish-Violet;
+      font-size: 1.1em;
+      line-height: 28px;
+    }
+    .btn-main-section {
+      text-decoration: none;
+      color: #ffffff;
+      border-radius: 500px;
+      text-align: center;
+      display: block;
+      padding: 15px;
+      width: 190px;
+      font-size: 1.2em;
+      height: 60px;
+      cursor: pointer;
+      margin: 30px auto;
+      background: $Cyan;
+    }
+  }
 }

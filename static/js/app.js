@@ -1,1 +1,1 @@
-import "./navbar.js";
+import "./utils/navbar.js";
