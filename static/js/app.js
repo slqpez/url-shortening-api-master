@@ -1,1 +1,1 @@
-console.log("live");
+import "./navbar.js";

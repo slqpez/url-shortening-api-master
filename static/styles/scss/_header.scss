@@ -3,11 +3,29 @@
   padding-top: 40px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
+  .close {
+    .middle-bar {
+      transform: translateX(-50px);
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+
+    .top-bar {
+      transform: rotate(45deg);
+      transition: all 0.5s;
+    }
+    .bottom-bar {
+      transform: rotate(-45deg) translateY(-11px) translateX(11px);
+      transition: all 0.5s;
+    }
+  }
   .burger-menu {
-    width: 30px;
-    height: 33px;
-
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -16,12 +34,57 @@
     .top-bar,
     .bottom-bar {
       width: 100%;
-      height: 4px;
+      height: 3px;
       background: $Grayish-Violet;
     }
   }
 
   .navbar {
+    background: $Dark-Violet;
+    position: absolute;
+    width: 100%;
+    height: 410px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+    .navbar-items {
+      border-bottom: 2px solid hsl(257, 20%, 33%);
+    }
+
+    .navbar-items,
+    .navbar-items-user {
+      width: 85%;
+      text-align: center;
+      margin: 30px auto;
+      li {
+        list-style: none;
+        margin: 20px;
+
+        a {
+          -webkit-tap-highlight-color: transparent;
+          text-decoration: none;
+          color: #ffff;
+          font-weight: 500;
+          display: block;
+          font-size: 1.2em;
+          padding: 10px;
+          border-radius: 500px;
+          /* background: cyan; */
+          width: 100%;
+
+          &:active {
+            background: $Gray;
+          }
+        }
+        a.log-item {
+          &:active {
+            background: $Cyan;
+          }
+        }
+      }
+    }
+  }
+  .navbar.visible {
     display: none;
   }
 }

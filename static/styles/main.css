@@ -10,6 +10,7 @@
   width: 330px;
   max-width: 375px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header {
@@ -21,11 +22,37 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header .close .middle-bar {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  visibility: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header .close .top-bar {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header .close .bottom-bar {
+  -webkit-transform: rotate(-45deg) translateY(-11px) translateX(11px);
+          transform: rotate(-45deg) translateY(-11px) translateX(11px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .header .burger-menu {
-  width: 30px;
-  height: 33px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,11 +68,61 @@
 .header .burger-menu .top-bar,
 .header .burger-menu .bottom-bar {
   width: 100%;
-  height: 4px;
+  height: 3px;
   background: #9e9aa7;
 }
 
 .header .navbar {
+  background: #3b3054;
+  position: absolute;
+  width: 100%;
+  height: 410px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.header .navbar .navbar-items {
+  border-bottom: 2px solid #4d4365;
+}
+
+.header .navbar .navbar-items,
+.header .navbar .navbar-items-user {
+  width: 85%;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.header .navbar .navbar-items li,
+.header .navbar .navbar-items-user li {
+  list-style: none;
+  margin: 20px;
+}
+
+.header .navbar .navbar-items li a,
+.header .navbar .navbar-items-user li a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 500;
+  display: block;
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 500px;
+  /* background: cyan; */
+  width: 100%;
+}
+
+.header .navbar .navbar-items li a:active,
+.header .navbar .navbar-items-user li a:active {
+  background: #bfbfbf;
+}
+
+.header .navbar .navbar-items li a.log-item:active,
+.header .navbar .navbar-items-user li a.log-item:active {
+  background: #2acfcf;
+}
+
+.header .navbar.visible {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
