@@ -130,6 +130,7 @@
   position: relative;
   z-index: -1;
   overflow: hidden;
+  padding-bottom: 170px;
 }
 
 .main-section .main-section-image {
@@ -173,5 +174,64 @@
   cursor: pointer;
   margin: 30px auto;
   background: #2acfcf;
+}
+
+.links {
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.links .card-input-link {
+  margin-top: -100px;
+  width: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 23px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 190px;
+  background: #3b3054 url("/images/bg-boost-mobile.svg") no-repeat;
+  background-position: -150% 0%;
+}
+
+.links .card-input-link .input-link {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.links .card-input-link .btn-input-link {
+  width: 100%;
+  color: #ffffff;
+  background: #2acfcf;
+  margin-top: 20px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 1.2em;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

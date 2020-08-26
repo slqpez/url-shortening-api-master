@@ -1,0 +1,42 @@
+.links {
+  background: hsl(0, 0%, 95%);
+  display: flex;
+
+  .card-input-link {
+    margin-top: -100px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 23px;
+    flex-direction: column;
+    align-items: center;
+    height: 190px;
+    background: $Dark-Violet url("/images/bg-boost-mobile.svg") no-repeat;
+    background-position: -150% 0%;
+
+    .input-link {
+      width: 100%;
+      height: 45px;
+      padding: 10px;
+      font-size: 1.1em;
+      border-radius: 5px;
+    }
+    .btn-input-link {
+      width: 100%;
+      color: #ffffff;
+      background: $Cyan;
+      margin-top: 20px;
+      height: 45px;
+      display: flex;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 1.2em;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
