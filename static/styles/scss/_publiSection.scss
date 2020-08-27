@@ -1,0 +1,26 @@
+.promo {
+  color: white;
+  background: $Dark-Violet url("/images/bg-boost-mobile.svg") no-repeat;
+  background-size: cover;
+
+  padding: 120px 0px 60px 0px;
+  text-align: center;
+  .promo-title {
+    font-size: 1.7em;
+  }
+
+  .btn-boost-section {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 500px;
+    text-align: center;
+    display: block;
+    padding: 15px;
+    width: 190px;
+    font-size: 1.2em;
+    height: 60px;
+    margin: 20px auto;
+    background: $Cyan;
+    cursor: pointer;
+  }
+}
