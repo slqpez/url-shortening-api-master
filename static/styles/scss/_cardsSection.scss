@@ -30,18 +30,18 @@
         margin-bottom: 0;
       }
       &:nth-child(1) > .card-image {
-        background: $Dark-Violet url("/images/icon-brand-recognition.svg")
-          no-repeat center;
+        background: $Dark-Violet
+          url("../../../images/icon-brand-recognition.svg") no-repeat center;
         background-size: 50%;
       }
       &:nth-child(2) > .card-image {
-        background: $Dark-Violet url("/images/icon-detailed-records.svg")
-          no-repeat center;
+        background: $Dark-Violet
+          url("../../../images/icon-detailed-records.svg") no-repeat center;
         background-size: 50%;
       }
       &:nth-child(3) > .card-image {
-        background: $Dark-Violet url("/images/icon-fully-customizable.svg")
-          no-repeat center;
+        background: $Dark-Violet
+          url("../../../images/icon-fully-customizable.svg") no-repeat center;
         background-size: 50%;
       }
 

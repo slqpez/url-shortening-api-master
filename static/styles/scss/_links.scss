@@ -13,8 +13,9 @@
     flex-direction: column;
     align-items: center;
     height: 190px;
-    background: $Dark-Violet url("/images/bg-boost-mobile.svg") no-repeat;
-    background-position: -150% 0%;
+    background: $Dark-Violet url("../../../images/bg-shorten-mobile.svg")
+      no-repeat;
+    background-position: 100% 0;
 
     .input-link {
       width: 100%;
