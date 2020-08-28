@@ -1,14 +1,16 @@
 import "./utils/navbar.js";
 import Ui from "./modules/Ui.js";
+import Api from "./modules/Api.js";
 
 const $btn = document.querySelector(".btn-input-link");
 $btn.addEventListener("click", initApp);
 
 function initApp(e) {
-  if (Ui.isEmpty()) {
-    Ui.showError("Please add a link");
+  const link = new Ui();
+  if (link.isEmpty()) {
+    link.showError("Please add a link");
   } else {
-    Ui.isCorrect();
+    link.isCorrect();
     //Inicializar api para generar el short link
   }
 
