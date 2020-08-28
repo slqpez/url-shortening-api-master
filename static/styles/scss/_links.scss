@@ -13,17 +13,20 @@
     flex-direction: column;
     align-items: center;
     height: auto;
-    background: $Dark-Violet url("../../../images/bg-shorten-mobile.svg")
+    background: $Dark-Violet url("/../../images/bg-shorten-mobile.svg")
       no-repeat;
     background-position: 100% 0;
-
-    .input-link {
+    .input-container {
       width: 100%;
-      height: 45px;
-      padding: 10px;
-      font-size: 1.1em;
-      border-radius: 5px;
+      .input-link {
+        width: 100%;
+        height: 45px;
+        padding: 10px;
+        font-size: 1.1em;
+        border-radius: 5px;
+      }
     }
+
     .btn-input-link {
       width: 100%;
       color: #ffffff;
