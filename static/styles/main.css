@@ -200,7 +200,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 190px;
+  height: auto;
   background: #3b3054 url("../../../images/bg-shorten-mobile.svg") no-repeat;
   background-position: 100% 0;
 }
@@ -223,7 +223,6 @@
   display: -ms-flexbox;
   display: flex;
   padding: 15px;
-  margin-top: 40px;
   font-size: 1.2em;
   text-decoration: none;
   -webkit-box-align: center;
@@ -234,6 +233,13 @@
           justify-content: center;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.error {
+  color: #f46262;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 5px;
 }
 
 .info-page-section {
