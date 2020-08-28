@@ -1,13 +1,15 @@
 export default class Api {
   static fetchData() {
-    fetch("https://rel.ink/api/links/Nn8y9p/", {
+    fetch("https://rel.ink/api/links/", {
       method: "POST",
-      url: "https://twitter.com/home",
-    }).then((res) => res.json().then((response) => console.log(response)));
-  }
-
-  static test() {
-    console.log("lptm");
+      body: JSON.stringify({ url: "https://twitter.com/home" }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => console.log("Success:", response));
   }
 }
 
