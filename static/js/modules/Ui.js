@@ -55,9 +55,15 @@ export default class Ui {
     card.classList.add("card-output-link");
     card.innerHTML = `<header class="header-card">${link}</header>
             <div class="content">
-              <p class="short-link">https://rel.ink/${hash}</p>
+              <p class="short-link" id="short" >https://rel.ink/${hash}</p>
               <a href="#" class="copy-btn">Copy</a>
             </div>`;
+
     outputCard.appendChild(card);
+  }
+
+  clearInput() {
+    const input = document.querySelector(".input-link");
+    input.value = "";
   }
 }

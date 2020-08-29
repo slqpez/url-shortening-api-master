@@ -1,4 +1,5 @@
 import "./utils/navbar.js";
+import "./utils/copy.js";
 import Ui from "./modules/Ui.js";
 import Api from "./modules/Api.js";
 
@@ -16,11 +17,12 @@ function initApp(e) {
     const api = new Api();
     const hash = api.postLink(`${link}`);
     hash.then((res) => {
-      uiData.showCard(link, res.hashid);
-      console.log(res.hashid);
       uiData.removeSpinner();
       if (res === undefined) {
         uiData.showError("Link does not exist.");
+      } else {
+        uiData.showCard(link, res.hashid);
+        uiData.clearInput();
       }
     });
   }

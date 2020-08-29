@@ -268,7 +268,7 @@
 
 .links .output-links .card-output-link .header-card {
   padding: 10px;
-  height: 40px;
+  height: auto;
   color: #35323e;
   border-bottom: 1px solid #bfbfbf;
 }
