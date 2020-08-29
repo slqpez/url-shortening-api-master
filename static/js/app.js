@@ -10,11 +10,13 @@ function initApp(e) {
   if (uiData.isEmpty()) {
     uiData.showError("Please add a link.");
   } else {
+    uiData.showSpinner();
     uiData.isCorrect();
     const link = uiData.getLink();
     const api = new Api();
     const hash = api.postLink(`${link}`);
     hash.then((res) => {
+      uiData.removeSpinner();
       if (res === undefined) {
         uiData.showError("Link does not exist.");
       }

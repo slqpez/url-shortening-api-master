@@ -23,6 +23,12 @@ export default class Ui {
       msgP.classList.add("error");
       msgP.textContent = msg;
       inputContainer.appendChild(msgP);
+    } else {
+      const pError = document.querySelector(".error");
+      pError.remove();
+      msgP.classList.add("error");
+      msgP.textContent = msg;
+      inputContainer.appendChild(msgP);
     }
   }
 
@@ -31,5 +37,15 @@ export default class Ui {
     const msg = document.querySelector(".error");
     if (document.querySelector(".error")) msg.remove();
     input.style.border = "2px solid green";
+  }
+
+  showSpinner() {
+    const spinner = document.querySelector(".spinner");
+    spinner.style.display = "block";
+  }
+
+  removeSpinner() {
+    const spinner = document.querySelector(".spinner");
+    spinner.style.display = "none";
   }
 }
