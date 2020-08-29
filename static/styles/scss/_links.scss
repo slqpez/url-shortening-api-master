@@ -27,7 +27,7 @@
       .spinner {
         margin: auto;
         display: none;
-        margin-top: 10px;
+        margin-top: 20px;
         height: 30px;
         width: 70px;
         img {
@@ -52,6 +52,48 @@
       justify-content: center;
       border-radius: 5px;
       cursor: pointer;
+    }
+  }
+
+  .output-links {
+    width: 100%;
+    height: auto;
+    //
+    .card-output-link {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      background: #ffffff;
+      border-radius: 5px;
+      .header-card {
+        padding: 10px;
+        height: 40px;
+        color: $Very-Dark-Blue;
+        border-bottom: 1px solid $Gray;
+      }
+      .content {
+        padding: 10px;
+
+        .short-link {
+          color: $Cyan;
+        }
+        .copy-btn {
+          background: $Cyan;
+          text-decoration: none;
+          color: #ffffff;
+          border-radius: 5px;
+          height: 40px;
+          width: 100%;
+          display: block;
+          padding: 10px;
+          text-align: center;
+          margin: 10px 0;
+
+          &:active {
+            background: $Dark-Violet;
+          }
+        }
+      }
     }
   }
 }

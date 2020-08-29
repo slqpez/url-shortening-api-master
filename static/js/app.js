@@ -16,6 +16,8 @@ function initApp(e) {
     const api = new Api();
     const hash = api.postLink(`${link}`);
     hash.then((res) => {
+      uiData.showCard(link, res.hashid);
+      console.log(res.hashid);
       uiData.removeSpinner();
       if (res === undefined) {
         uiData.showError("Link does not exist.");

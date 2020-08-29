@@ -11,7 +11,7 @@ export default class Api {
         },
       });
       if (response.status === 400) {
-        throw new Error("Bad response from server");
+        throw new Error();
       }
       const data = await response.json();
       return data;

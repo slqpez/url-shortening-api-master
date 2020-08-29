@@ -220,7 +220,7 @@
 .links .card-input-link .input-container .spinner {
   margin: auto;
   display: none;
-  margin-top: 10px;
+  margin-top: 20px;
   height: 30px;
   width: 70px;
 }
@@ -251,6 +251,51 @@
           justify-content: center;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.links .output-links {
+  width: 100%;
+  height: auto;
+}
+
+.links .output-links .card-output-link {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.links .output-links .card-output-link .header-card {
+  padding: 10px;
+  height: 40px;
+  color: #35323e;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.links .output-links .card-output-link .content {
+  padding: 10px;
+}
+
+.links .output-links .card-output-link .content .short-link {
+  color: #2acfcf;
+}
+
+.links .output-links .card-output-link .content .copy-btn {
+  background: #2acfcf;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.links .output-links .card-output-link .content .copy-btn:active {
+  background: #3b3054;
 }
 
 .error {
