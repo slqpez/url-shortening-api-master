@@ -6,12 +6,19 @@ const $btn = document.querySelector(".btn-input-link");
 $btn.addEventListener("click", initApp);
 
 function initApp(e) {
-  const link = new Ui();
-  if (link.isEmpty()) {
-    link.showError("Please add a link");
+  const uiData = new Ui();
+  if (uiData.isEmpty()) {
+    uiData.showError("Please add a link.");
   } else {
-    link.isCorrect();
-    //Inicializar api para generar el short link
+    uiData.isCorrect();
+    const link = uiData.getLink();
+    const api = new Api();
+    const hash = api.postLink(`${link}`);
+    hash.then((res) => {
+      if (res === undefined) {
+        uiData.showError("Link does not exist.");
+      }
+    });
   }
 
   e.preventDefault();
