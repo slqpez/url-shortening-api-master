@@ -66,4 +66,34 @@ export default class Ui {
     const input = document.querySelector(".input-link");
     input.value = "";
   }
+  copyLink() {
+    const btn = document.querySelectorAll(".copy-btn");
+    const btns = Array.from(btn);
+
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const shortLink = e.target.previousElementSibling.textContent;
+        const input = document.createElement("input");
+        btn.textContent = "Copied";
+        btn.style.background = "hsl(257, 27%, 26%)";
+        input.setAttribute("value", shortLink);
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        input.remove();
+        this.showModal(btn);
+        e.preventDefault();
+      });
+    });
+  }
+
+  showModal(father) {
+    const msgModal = document.createElement("div");
+    msgModal.classList.add("modal");
+    msgModal.textContent = "Link copied";
+    father.appendChild(msgModal);
+    setTimeout(() => {
+      msgModal.remove();
+    }, 1500);
+  }
 }

@@ -1,5 +1,4 @@
 import "./utils/navbar.js";
-import "./utils/copy.js";
 import Ui from "./modules/Ui.js";
 import Api from "./modules/Api.js";
 
@@ -23,6 +22,7 @@ function initApp(e) {
       } else {
         uiData.showCard(link, res.hashid);
         uiData.clearInput();
+        uiData.copyLink();
       }
     });
   }

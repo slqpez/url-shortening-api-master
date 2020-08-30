@@ -292,10 +292,17 @@
   padding: 10px;
   text-align: center;
   margin: 10px 0;
+  position: relative;
 }
 
-.links .output-links .card-output-link .content .copy-btn:active {
-  background: #3b3054;
+.links .output-links .card-output-link .content .copy-btn .modal {
+  width: auto;
+  border-radius: 10px;
+  padding: 10px;
+  background: #b4b2b2;
+  position: absolute;
+  top: -60px;
+  right: -50px;
 }
 
 .error {
