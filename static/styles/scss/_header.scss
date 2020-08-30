@@ -5,6 +5,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media screen and(min-width: $Tablet) {
+    flex-wrap: nowrap;
+  }
+
   .close {
     .middle-bar {
       transform: translateX(-50px);
@@ -37,6 +41,9 @@
       height: 3px;
       background: $Grayish-Violet;
     }
+    @media screen and(min-width: $Tablet) {
+      display: none;
+    }
   }
 
   .navbar {
@@ -44,12 +51,30 @@
     position: absolute;
     z-index: 2;
     width: 100%;
-    height: 410px;
+    height: auto;
     margin-top: 55px;
     border-radius: 10px;
 
+    @media screen and(min-width: $Tablet) {
+      position: static;
+      background: none;
+      margin: 0 0px 0 20px;
+      justify-content: flex-end;
+
+      .navbar-items {
+        display: flex;
+      }
+      .navbar-items-user {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
     .navbar-items {
       border-bottom: 2px solid hsl(257, 20%, 33%);
+      @media screen and(min-width: $Tablet) {
+        border: none;
+      }
     }
 
     .navbar-items,
@@ -75,6 +100,9 @@
 
           &:active {
             background: $Gray;
+            @media screen and(min-width: $Tablet) {
+              color: white;
+            }
           }
         }
         a.log-item {
@@ -83,9 +111,23 @@
           }
         }
       }
+      @media screen and(min-width: $Tablet) {
+        margin: 0;
+        li {
+          margin: 0 10px;
+          a {
+            padding: 0 8px;
+            font-size: 0.8em;
+            color: $Gray;
+          }
+        }
+      }
     }
   }
   .navbar.visible {
     display: none;
+    @media screen and(min-width: $Tablet) {
+      display: flex;
+    }
   }
 }

@@ -5,9 +5,23 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: auto;
+}
+body {
+  font-size: 14px;
+  overflow: hidden;
+  @media screen and(min-width: $Tablet) {
+    font-size: 20px;
+  }
+}
+
 .wrapper {
   width: 85%;
-  max-width: 375px;
+  max-width: $Desktop;
   margin: 0 auto;
   position: relative;
+
+  @media screen and(min-width: $Tablet) {
+  }
 }
