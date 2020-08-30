@@ -29,3 +29,6 @@ function initApp(e) {
 
   e.preventDefault();
 }
+
+//TODO Responsive design.
+//TODO Fix main bg.
