@@ -98,7 +98,8 @@
           /* background: cyan; */
           width: 100%;
 
-          &:active {
+          &:active,
+          &:hover {
             background: $Gray;
             @media screen and(min-width: $Tablet) {
               color: white;
@@ -106,7 +107,8 @@
           }
         }
         a.log-item {
-          &:active {
+          &:active,
+          &:hover {
             background: $Cyan;
           }
         }
@@ -121,6 +123,17 @@
             color: $Gray;
             @media screen and(min-width: 1100px) {
               font-size: 1em;
+
+              &:hover {
+                background-color: $Gray;
+                color: white;
+              }
+            }
+          }
+          a.log-item {
+            &:hover {
+              background-color: $Cyan;
+              color: white;
             }
           }
         }

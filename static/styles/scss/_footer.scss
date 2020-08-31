@@ -1,8 +1,24 @@
 .footer {
   padding-bottom: 60px;
   position: relative;
+
+  .wrapper-footer {
+    position: relative;
+    @media (min-width: $Tablet) {
+      display: grid;
+      padding-top: 40px;
+      justify-content: space-between;
+      align-items: start;
+      grid-template-columns: repeat(5, 1fr);
+      font-size: 0.7em;
+    }
+  }
   .brand-footer {
     margin: 60px 0 20px 0;
+    @media (min-width: $Tablet) {
+      margin: 0;
+      margin-right: 30px;
+    }
   }
   background: $Very-Dark-Violet;
   color: #ffffff;
@@ -19,6 +35,13 @@
     .text-footer {
       color: $Gray;
       padding: 5px;
+      cursor: pointer;
+      &:hover {
+        color: $Cyan;
+      }
+    }
+    @media (min-width: $Tablet) {
+      margin: 0;
     }
   }
   .socials {
@@ -26,15 +49,34 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 10px;
+    img {
+      cursor: pointer;
+      &:hover {
+        transform: scale(2);
+      }
+    }
+    @media (min-width: $Tablet) {
+      width: 100%;
+      height: 20px;
+      gap: 10px;
+
+      img {
+        width: 15%;
+      }
+    }
   }
   .attribution {
     color: white;
     position: absolute;
     font-size: 0.8em;
-    bottom: 5px;
+    bottom: -40px;
     a {
       text-decoration: none;
       color: #ffffff;
+      &:hover {
+        color: $Cyan;
+      }
     }
   }
 }

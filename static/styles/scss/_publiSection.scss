@@ -22,5 +22,9 @@
     margin: 20px auto;
     background: $Cyan;
     cursor: pointer;
+
+    &:hover {
+      background: rgba($Cyan, 0.8);
+    }
   }
 }

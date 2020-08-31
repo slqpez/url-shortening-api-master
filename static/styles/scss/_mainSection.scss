@@ -88,6 +88,10 @@
       margin: 30px auto;
       background: $Cyan;
       cursor: pointer;
+
+      &:hover {
+        background: rgba($Cyan, 0.8);
+      }
       @media screen and(min-width: $Tablet) {
         margin: 30px 0;
       }
