@@ -1,6 +1,7 @@
 .main-section {
   position: relative;
   padding-bottom: 170px;
+  background: white;
   @media screen and(min-width: $Tablet) {
     display: grid;
     grid-template-columns: 60% 40%;
