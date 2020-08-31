@@ -522,8 +522,8 @@ body {
     display: -ms-grid;
     display: grid;
     gap: 20px;
-    -ms-grid-columns: 70% 1fr;
-        grid-template-columns: 70% 1fr;
+    -ms-grid-columns: 60% 1fr;
+        grid-template-columns: 60% 1fr;
   }
 }
 
@@ -571,10 +571,20 @@ body {
   width: auto;
   border-radius: 10px;
   padding: 10px;
+  text-align: center;
   background: #b4b2b2;
   position: absolute;
-  top: -60px;
-  right: -50px;
+  bottom: -70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .links .output-links .card-output-link .content .copy-btn .modal {
+    width: 100%;
+    bottom: -50px;
+  }
 }
 
 .error {
