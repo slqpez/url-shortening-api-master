@@ -1,19 +1,52 @@
 .main-section {
   position: relative;
   padding-bottom: 170px;
+  @media screen and(min-width: $Tablet) {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-bottom: 140px;
+  }
 
   .main-section-image {
     margin-top: 10px;
-    width: 450px;
-    height: 400px;
+    width: 500px;
+    height: 290px;
     background: url("../../images/illustration-working.svg") no-repeat;
-    background-size: 100%;
-    background-position: 15px 0;
+    background-size: contain;
+
+    @media screen and(min-width: 460px) and(max-width:$Tablet - 1px) {
+      width: 100%;
+      background-position: center;
+    }
+    @media screen and(min-width: $Tablet) {
+      order: 2;
+      width: 600px;
+      background-position: 10px;
+    }
+
+    @media screen and(min-width: 1100px) {
+      background-position: 50px top;
+      width: 550px;
+      margin-top: 20px;
+      height: 400px;
+    }
+    @media screen and(min-width: 1250px) {
+      background-position: 130px top;
+      width: 800px;
+    }
   }
 
   .main-section-info {
     margin-top: 30px;
     text-align: center;
+    @media screen and(min-width: $Tablet) {
+      text-align: left;
+      margin-top: 50px;
+      font-size: 15px;
+    }
+    @media screen and(min-width: 1100px) {
+      font-size: 1.1em;
+    }
 
     .section-info-title {
       font-weight: 800;
@@ -21,18 +54,33 @@
       font-size: 2.4em;
       line-height: 50px;
       margin-bottom: 10px;
+      @media screen and(min-width: $Tablet) {
+        line-height: 40px;
+      }
+      @media screen and(min-width: 1100px) {
+        line-height: 55px;
+      }
     }
     .section-info-text {
       color: $Grayish-Violet;
       font-size: 1.1em;
       line-height: 28px;
+      @media screen and(min-width: $Tablet) {
+        line-height: 23px;
+        font-size: 1em;
+      }
+      @media screen and(min-width: 1100px) {
+        line-height: 25px;
+        font-size: 0.9em;
+      }
     }
     .btn-main-section {
       text-decoration: none;
       color: #ffffff;
       border-radius: 500px;
-      text-align: center;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 15px;
       width: 190px;
       font-size: 1.2em;
@@ -40,6 +88,9 @@
       margin: 30px auto;
       background: $Cyan;
       cursor: pointer;
+      @media screen and(min-width: $Tablet) {
+        margin: 30px 0;
+      }
     }
   }
 }

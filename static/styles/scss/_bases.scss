@@ -9,7 +9,7 @@ html {
   overflow: auto;
 }
 body {
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   @media screen and(min-width: $Tablet) {
     font-size: 20px;
@@ -23,5 +23,6 @@ body {
   position: relative;
 
   @media screen and(min-width: $Tablet) {
+    width: 80%;
   }
 }
