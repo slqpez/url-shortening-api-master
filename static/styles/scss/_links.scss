@@ -66,6 +66,7 @@
       @media screen and(min-width: $Tablet) {
         margin: 0;
         font-size: 0.9em;
+        align-self: start;
       }
     }
   }
@@ -73,25 +74,44 @@
   .output-links {
     width: 100%;
     height: auto;
-    //
+
     .card-output-link {
       width: 100%;
       height: auto;
       margin-top: 20px;
       background: #ffffff;
       border-radius: 5px;
+      @media screen and(min-width: $Tablet) {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+      }
+
       .header-card {
         padding: 10px;
         height: auto;
         word-wrap: break-word;
         color: $Very-Dark-Blue;
         border-bottom: 1px solid $Gray;
+        @media screen and(min-width: $Tablet) {
+          border-bottom: none;
+          font-size: 1.1em;
+        }
       }
       .content {
         padding: 10px;
 
+        @media screen and(min-width: $Tablet) {
+          display: grid;
+          gap: 20px;
+          grid-template-columns: 70% 1fr;
+        }
+
         .short-link {
           color: $Cyan;
+          word-wrap: break-word;
+          @media screen and(min-width: $Tablet) {
+            text-align: right;
+          }
         }
         .copy-btn {
           background: $Cyan;
@@ -100,11 +120,17 @@
           border-radius: 5px;
           height: 40px;
           width: 100%;
-          display: block;
+          display: flex;
           padding: 10px;
-          text-align: center;
+          justify-content: center;
+          align-items: center;
           margin: 10px 0;
           position: relative;
+          @media screen and(min-width: $Tablet) {
+            margin: 0;
+            font-size: 0.7em;
+            padding: 5px;
+          }
 
           .modal {
             width: auto;
