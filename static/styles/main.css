@@ -47,7 +47,20 @@ body {
   }
 }
 
-.header {
+.wrapper-header {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper-header {
+    width: 80%;
+  }
+}
+
+.wrapper-header {
   background: #ffff;
   padding-top: 40px;
   display: -webkit-box;
@@ -61,13 +74,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .wrapper-header {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
 }
 
-.header .close .middle-bar {
+.wrapper-header .close .middle-bar {
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
   visibility: hidden;
@@ -75,21 +88,21 @@ body {
   transition: all 0.2s;
 }
 
-.header .close .top-bar {
+.wrapper-header .close .top-bar {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.header .close .bottom-bar {
+.wrapper-header .close .bottom-bar {
   -webkit-transform: rotate(-45deg) translateY(-11px) translateX(11px);
           transform: rotate(-45deg) translateY(-11px) translateX(11px);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.header .burger-menu {
+.wrapper-header .burger-menu {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -105,21 +118,21 @@ body {
       justify-content: space-around;
 }
 
-.header .burger-menu .middle-bar,
-.header .burger-menu .top-bar,
-.header .burger-menu .bottom-bar {
+.wrapper-header .burger-menu .middle-bar,
+.wrapper-header .burger-menu .top-bar,
+.wrapper-header .burger-menu .bottom-bar {
   width: 100%;
   height: 3px;
   background: #9e9aa7;
 }
 
 @media screen and (min-width: 768px) {
-  .header .burger-menu {
+  .wrapper-header .burger-menu {
     display: none;
   }
 }
 
-.header .navbar {
+.wrapper-header .navbar {
   background: #3b3054;
   position: absolute;
   z-index: 2;
@@ -130,7 +143,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header .navbar {
+  .wrapper-header .navbar {
     position: static;
     background: none;
     margin: 0 0px 0 20px;
@@ -138,12 +151,12 @@ body {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .header .navbar .navbar-items {
+  .wrapper-header .navbar .navbar-items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .header .navbar .navbar-items-user {
+  .wrapper-header .navbar .navbar-items-user {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -153,31 +166,31 @@ body {
   }
 }
 
-.header .navbar .navbar-items {
+.wrapper-header .navbar .navbar-items {
   border-bottom: 2px solid #4d4365;
 }
 
 @media screen and (min-width: 768px) {
-  .header .navbar .navbar-items {
+  .wrapper-header .navbar .navbar-items {
     border: none;
   }
 }
 
-.header .navbar .navbar-items,
-.header .navbar .navbar-items-user {
+.wrapper-header .navbar .navbar-items,
+.wrapper-header .navbar .navbar-items-user {
   width: 85%;
   text-align: center;
   margin: 30px auto;
 }
 
-.header .navbar .navbar-items li,
-.header .navbar .navbar-items-user li {
+.wrapper-header .navbar .navbar-items li,
+.wrapper-header .navbar .navbar-items-user li {
   list-style: none;
   margin: 20px;
 }
 
-.header .navbar .navbar-items li a,
-.header .navbar .navbar-items-user li a {
+.wrapper-header .navbar .navbar-items li a,
+.wrapper-header .navbar .navbar-items-user li a {
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   color: #ffff;
@@ -190,37 +203,37 @@ body {
   width: 100%;
 }
 
-.header .navbar .navbar-items li a:active, .header .navbar .navbar-items li a:hover,
-.header .navbar .navbar-items-user li a:active,
-.header .navbar .navbar-items-user li a:hover {
+.wrapper-header .navbar .navbar-items li a:active, .wrapper-header .navbar .navbar-items li a:hover,
+.wrapper-header .navbar .navbar-items-user li a:active,
+.wrapper-header .navbar .navbar-items-user li a:hover {
   background: #bfbfbf;
 }
 
 @media screen and (min-width: 768px) {
-  .header .navbar .navbar-items li a:active, .header .navbar .navbar-items li a:hover,
-  .header .navbar .navbar-items-user li a:active,
-  .header .navbar .navbar-items-user li a:hover {
+  .wrapper-header .navbar .navbar-items li a:active, .wrapper-header .navbar .navbar-items li a:hover,
+  .wrapper-header .navbar .navbar-items-user li a:active,
+  .wrapper-header .navbar .navbar-items-user li a:hover {
     color: white;
   }
 }
 
-.header .navbar .navbar-items li a.log-item:active, .header .navbar .navbar-items li a.log-item:hover,
-.header .navbar .navbar-items-user li a.log-item:active,
-.header .navbar .navbar-items-user li a.log-item:hover {
+.wrapper-header .navbar .navbar-items li a.log-item:active, .wrapper-header .navbar .navbar-items li a.log-item:hover,
+.wrapper-header .navbar .navbar-items-user li a.log-item:active,
+.wrapper-header .navbar .navbar-items-user li a.log-item:hover {
   background: #2acfcf;
 }
 
 @media screen and (min-width: 768px) {
-  .header .navbar .navbar-items,
-  .header .navbar .navbar-items-user {
+  .wrapper-header .navbar .navbar-items,
+  .wrapper-header .navbar .navbar-items-user {
     margin: 0;
   }
-  .header .navbar .navbar-items li,
-  .header .navbar .navbar-items-user li {
+  .wrapper-header .navbar .navbar-items li,
+  .wrapper-header .navbar .navbar-items-user li {
     margin: 0 10px;
   }
-  .header .navbar .navbar-items li a,
-  .header .navbar .navbar-items-user li a {
+  .wrapper-header .navbar .navbar-items li a,
+  .wrapper-header .navbar .navbar-items-user li a {
     padding: 0 8px;
     font-size: 0.75em;
     color: #bfbfbf;
@@ -228,31 +241,31 @@ body {
 }
 
 @media screen and (min-width: 768px) and (min-width: 1100px) {
-  .header .navbar .navbar-items li a,
-  .header .navbar .navbar-items-user li a {
+  .wrapper-header .navbar .navbar-items li a,
+  .wrapper-header .navbar .navbar-items-user li a {
     font-size: 1em;
   }
-  .header .navbar .navbar-items li a:hover,
-  .header .navbar .navbar-items-user li a:hover {
+  .wrapper-header .navbar .navbar-items li a:hover,
+  .wrapper-header .navbar .navbar-items-user li a:hover {
     background-color: #bfbfbf;
     color: white;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header .navbar .navbar-items li a.log-item:hover,
-  .header .navbar .navbar-items-user li a.log-item:hover {
+  .wrapper-header .navbar .navbar-items li a.log-item:hover,
+  .wrapper-header .navbar .navbar-items-user li a.log-item:hover {
     background-color: #2acfcf;
     color: white;
   }
 }
 
-.header .navbar.visible {
+.wrapper-header .navbar.visible {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .header .navbar.visible {
+  .wrapper-header .navbar.visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
